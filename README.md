@@ -129,7 +129,7 @@ Now take a look again at `environment.rb`, which our `Rakefile` also requires:
 # config/environment.rb
 ENV["RACK_ENV"] ||= "development"
 
-require 'bundler/setup'
+require "bundler/setup"
 Bundler.require(:default, ENV["RACK_ENV"])
 ```
 
@@ -368,7 +368,7 @@ Instantiate a new Artist named Jon, set his age to 30, and save him to the
 database:
 
 ```rb
-a = Artist.new(name: 'Jon')
+a = Artist.new(name: "Jon")
 # => #<Artist id: nil, name: "Jon", genre: nil, age: nil, hometown: nil>
 
 a.age = 30
@@ -383,7 +383,7 @@ persist, we need to save it. If we want to create a new instance and save it all
 in one go, we can use `.create`.
 
 ```rb
-Artist.create(name: 'Kelly')
+Artist.create(name: "Kelly")
 # => #<Artist id: 2, name: "Kelly", genre: nil, age: nil, hometown: nil>
 ```
 
@@ -392,13 +392,13 @@ Return an array of all Artists from the database:
 ```rb
 Artist.all
 # => [#<Artist id: 1, name: "Jon", genre: nil, age: 30, hometown: nil>,
- #<Artist id: 2, name: "Kelly", genre: nil, age: nil, hometown: nil>]
+#<Artist id: 2, name: "Kelly", genre: nil, age: nil, hometown: nil>]
 ```
 
 Find an Artist by name:
 
 ```rb
-Artist.find_by(name: 'Jon')
+Artist.find_by(name: "Jon")
 # => #<Artist id: 1, name: "Jon", genre: nil, age: 30, hometown: nil>
 ```
 
